@@ -17,8 +17,7 @@ server.post('/videos', async(request, reply) => {
    return reply.status(201).send()
 })
 
-server.get('/videos', async (request) => {
-    // const search = request.query.search
+server.get('/videos', async () => {
     const videos =  await database.list()
 
     return videos
